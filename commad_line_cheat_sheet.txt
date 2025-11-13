@@ -1,0 +1,52 @@
+ls - list files/ folders in current directory
+ls -l - Long listing (detailed info) -rw-r--r-- 1 user 1024 file1.txt
+ls -la - Show all files, including hidden (.)
+cd - change directory usage:  cd directoryname
+pwd - print current directory
+mkdir - make a new directory. usage: mkdir new_directory_name - can add multiple
+diretory names to make multiple directories
+touch - create a new file. 
+ 
+cat - returns content of a file. usage example : cat file1.txt
+
+wc -  returns word count in format <lines> <words> <bytes> file1.txt
+.  usage example : wc file1.txt  may return : 2 4 20 file1.txt
+Note: add a -w at the end to should only cound for words. example wc -w file1.txt
+will return <number of words> <file name>
+
+pipes (|) - allows you to pass the output from one command as the input to another.
+example:
+ls | wc -w  :counts the number of items (files and directories) in the current directory.
+cat file1.txt | wc -w :returns the word count for file1.txt.
+cat file1.txt file2.txt | wc -w :combines both files and returns the total word count for file1.txt and file2.txt
+
+Redirection (<, >) -
+The basic workflow of any Linux command is that it takes an input and produces an output.
+The standard input (stdin) device is usually the keyboard.
+The standard output (stdout) device is usually the screen.
+With redirection, you can change where the input comes from and where the output goes.
+There are three main types of I/O redirection:
+Standard input (stdin)
+Standard output (stdout)
+Standard error (stderr)
+Examples:
+
+cat > input.txt
+Redirects the output from the keyboard (stdin) into the file input.txt.
+cat < input.txt
+Takes input.txt as the input file and displays its contents on the screen.
+ls -l > output.txt
+Sends the output of ls -l (stdout) to a file named output.txt instead of displaying it on the screen.
+ls nonexistentfile 2 > error.txt
+Redirects error messages (stderr) into error.txt.
+
+
+Global Regular Expression Print (grep)
+grep is used to search for specific patterns or text within files. It prints all lines that match the given pattern.
+Example:
+grep format filename.txt
+– Searches for the word “format” in filename.txt and prints all lines that contain it.
+The word doesn’t have to be at the start of the line — it can appear anywhere in the line.
+To search for lines that start with a word (e.g., “format”), use the caret ^ symbol:
+grep '^format' filename.txt
+
