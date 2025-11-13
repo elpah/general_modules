@@ -15,7 +15,7 @@ It includes:
 
 Currently, it includes:
 - `git_cheat_sheet.txt` — a quick reference for common Git commands.
-- `command_line_cheat_sheet.txt` - a quick reference for common commandline commands.
+- `unix_cmdline_cheat_sheet.txt` - a quick reference for common commandline commands.
 - More to be added soon
 
 ---
