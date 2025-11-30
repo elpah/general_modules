@@ -1,0 +1,23 @@
+Django Workflow (Setup)
+1. Create your project folder
+- mkdir myproject
+- cd myproject
+
+2. Create a virtual environment
+- python3 -m venv venv
+
+3. Activate it
+- source venv/bin/activate
+
+4. Install Django inside venv
+- pip install django
+
+5. Create your Django project
+- django-admin startproject myproject .
+
+6. Run the server
+- python manage.py runserver
+
+
+To leave the virtual environment, simply run:
+- deactivate
