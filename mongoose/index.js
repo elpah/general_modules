@@ -95,7 +95,6 @@ async function runExamples() {
     // -----------------
     // const res = await Movie.updateMany({ title:{$in:['titanic','Cindarella']} }, { rating: 20 }); // this wil update all movies with title in array with rating of 20
     // console.log(res)
-
     // -----------------
     // FindOneAndUpdate
     //not that when you console.log, this will print the old value
@@ -105,19 +104,23 @@ async function runExamples() {
     //   { rating: 50 },
     // );
     // console.log(movie);
-
     // -----------------
     // FindOneAndUpdate
     // to print the new updated value, pass in a third argument, new.. which is false by default. this will print the old value
     // -----------------
-    const movie = await Movie.findOneAndUpdate(
-      { title: "Super Man" },
-      { rating: 80 },
-      { new: true },
-    );
-    console.log(movie);
+    // const movie = await Movie.findOneAndUpdate(
+    //   { title: "Super Man" },
+    //   { rating: 80 },
+    //   { new: true },
+    // );
+    // console.log(movie);
     // const movies = await Movie.find({});
     // console.log(movies);
+    // -----------------
+    //Other Methods
+    // deleteOne, deleteMany,findByIdAndDelete(),findOneAndDelete(), findOneAndUpdate() etc
+    // visit docs for more http://mongoosejs.com/docs/api/model.html
+    // -----------------
   } catch (err) {
     console.error("❌ Error:", err.message);
   }
