@@ -4,26 +4,26 @@ import mongoose from "mongoose";
 const connectionString = process.env.CONNECTION_STRING;
 
 // =====================
-// 🔌 CONNECT TO DATABASE
+// CONNECT TO DATABASE
 // =====================
 async function main() {
   try {
     await mongoose.connect(connectionString);
-    console.log("✅ Connected to MongoDB");
+    console.log(" Connected to MongoDB");
 
     await runExamples();
   } catch (err) {
-    console.error("❌ Connection error:", err.message);
+    console.error("Connection error:", err.message);
   } finally {
     await mongoose.disconnect();
-    console.log("🔌 Disconnected");
+    console.log("Disconnected");
   }
 }
 
 main();
 
 // =====================
-// 📦 SCHEMA
+// SCHEMA
 // =====================
 const productSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -50,7 +50,7 @@ productSchema.statics.fireSale = function () {
 const Product = mongoose.model("Product", productSchema);
 
 // =====================
-// 🧪 TESTS
+//  TESTS
 // =====================
 const runExamples = async () => {
   try {

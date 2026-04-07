@@ -5,27 +5,27 @@ import mongoose from "mongoose";
 const connectionString = process.env.CONNECTION_STRING;
 
 // =====================
-// 🔌 CONNECT TO DATABASE
+// CONNECT TO DATABASE
 // =====================
 async function main() {
   try {
     await mongoose.connect(connectionString);
-    console.log("✅ Connected to MongoDB");
+    console.log(" Connected to MongoDB");
 
     // Run examples here
     await runExamples();
   } catch (err) {
-    console.error("❌ Connection error:", err.message);
+    console.error("Connection error:", err.message);
   } finally {
     await mongoose.disconnect();
-    console.log("🔌 Disconnected");
+    console.log("Disconnected");
   }
 }
 
 main();
 
 // =====================
-// 📦 SCHEMA + MODEL
+//  SCHEMA + MODEL
 // =====================
 const movieSchema = new mongoose.Schema({
   title: String,
@@ -42,7 +42,7 @@ const Movie = mongoose.model("Movie", movieSchema);
 async function runExamples() {
   try {
     // -----------------
-    // ➕ Create one movie
+    //  Create one movie
     // -----------------
     // const movie = new Movie({
     //   title: "Titanic",
@@ -52,7 +52,7 @@ async function runExamples() {
     // });
     // await movie.save();
     // -----------------
-    // ➕ Insert many
+    //  Insert many
     // -----------------
     // await Movie.insertMany([
     //   { title: "Titanic", year: 2020, score: 10, rating: 8 },
